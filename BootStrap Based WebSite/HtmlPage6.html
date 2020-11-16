@@ -1,0 +1,123 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <title></title>
+    <script src="jquery-3.4.1.js"></script>
+    <script type="text/javascript">
+        $(document).ready(function () {
+            $("#btnHide").click(function () {
+                $("#dvFirst").hide("slow", function () {
+                    $("#dvSecond").hide("slow", function () {
+                        $("#dvThird").hide("slow");
+                    });
+                });
+            });
+
+            $("#btnShow").click(function () {
+                $("#dvFirst").show("slow", function () {
+                    $("#dvSecond").show("slow", function () {
+                        $("#dvThird").show(10000);
+                    });
+                });
+            });
+
+            $("#btnToggle").click(function () {
+                $("#dvThird").toggle("slow");
+            });
+            $("#btnFadeOut").click(function () {
+                $("#dvFirst").fadeOut("slow", function () {
+                    $("#dvSecond").fadeOut("slow", function () {
+                        $("#dvThird").fadeOut("slow");
+                    });
+                });
+            });
+
+            $("#btnFadeIn").click(function () {
+                $("#dvFirst").fadeIn("slow", function () {
+                    $("#dvSecond").fadeIn("slow", function () {
+                        $("#dvThird").fadeIn("slow");
+                    });
+                });
+            });
+
+            $("#btnFadeToggle").click(function () {
+                $("#dvFirst").fadeToggle("slow", function () {
+                    $("#dvSecond").fadeToggle("slow", function () {
+                        $("#dvThird").fadeToggle("slow");
+                    });
+                });
+            });
+
+            $("#btnChange").change(function () {
+                var rangeValue = $(this).val();
+
+                rangeValue = rangeValue / 100.0;
+
+                $("div").css("opacity", rangeValue);
+
+
+            });
+            $("#btnSlideUp").click(function () {
+                $("#dvFirst").slideUp("slow", function () {
+                    $("#dvSecond").slideUp("slow", function () {
+                        $("#dvThird").slideUp("slow");
+                    });
+                });
+            });
+            $("#btnSlideDwon").click(function () {
+                $("#dvFirst").slideDown("slow", function () {
+                    $("#dvSecond").slideDown("slow", function () {
+                        $("#dvThird").slideDown("slow");
+                    });
+                });
+            });
+
+            $("#btnSlideToggle").click(function () {
+                $("#dvFirst").slideToggle("slow", function () {
+                    $("#dvSecond").slideToggle("slow", function () {
+                        $("#dvThird").slideToggle("slow");
+                    });
+                });
+            });
+
+            $("#btnDance").click(function () {
+                Dance();
+            });
+        });
+
+        function Dance() {
+            $("div")
+                .hide("slow")
+                .show("slow", function () {
+                    $("#dvFirst").hide("slow", function () {
+                        $("#dvSecond").hide("slow", function () {
+                            $("#dvThird").hide("slow");
+                        });
+                    });
+                })
+                .slideDown("slow")
+                .slideUp("slow")
+                .fadeIn("slow")
+                .fadeOut("slow")
+                .fadeToggle("slow")
+        }
+    </script>
+</head>
+<body>
+    <input type="button" value="Dance" id="btnDance" />
+    <input type="range" id="btnChange" />
+    <input type="button" id="btnSlideUp" value="Slide Up" />
+    <input type="button" id="btnSlideDwon" value="Slide Down" />
+    <input type="button" id="btnSlideToggle" value="Slide Toggle" />
+    <input type="button" id="btnHide" value="Hide" />
+    <input type="button" id="btnShow" value="Show" />
+    <input type="button" id="btnToggle" value="Toggle" />
+    <input type="button" id="btnFadeOut" value="Fade Out" />
+    <input type="button" id="btnFadeIn" value="Fade In" />
+    <input type="button" id="btnFadeToggle" value="Fade Toggle" />
+    <div id="dvFirst" style="background-color:red; width:100%; height:100px;"></div>
+    <div id="dvSecond" style="background-color:blue; width:100%; height:100px;"></div>
+    <div id="dvThird" style="background-color:green; width:100%; height:100px;"></div>
+</body>
+</html>

@@ -1,0 +1,31 @@
+﻿body {
+    background-color: #c9deff;
+}
+.container{
+    width:1280px;
+   
+}
+.car {
+    width: 400px;
+    height: 200px;
+    border: 2px solid red;
+    border-radius: 50px 50px 50px 50px;
+    background-color: #0b4096;
+}
+.tyres {
+    height: 50px;
+    width: 50px;
+    -webkit-border-radius: 100%;
+    border-radius: 100%;
+    border: 3px black;
+    background-color: #5eb2bf; 
+    margin-top:170px;
+    margin-left:20px;
+}
+#tyre1 {
+ float:left;
+}
+#tyre2 {
+    float: left;
+    margin-left:250px;
+}

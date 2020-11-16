@@ -1,0 +1,42 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <link href="StyleSheet1.css" rel="stylesheet" />
+    <script src="jquery-3.4.1.min.js"></script>
+    <script type="text/javascript">
+        $(document).keydown(function (e) {
+            if (e.which == 39) {
+                $(".car").css("margin-left", "+=20px");
+            }
+            else if (e.which == 37) {
+                $(".car").css("margin-left", "-=20px");
+            }
+            else if (e.which == 40) {
+                $(".car").css("margin-top", "+=20px");
+            }
+            else if (e.which == 38) {
+                $(".car").css("margin-top", "-=20px");
+            }
+
+
+        }
+        );</script>
+
+    <title></title>
+</head>
+<body>
+    <div class="container">
+        <div class="car">
+            <div class="tyres" id="tyre1">
+
+            </div>
+            <div class="tyres" id="tyre2">
+
+            </div>
+
+        </div>
+    </div>
+    
+</body>
+</html>
