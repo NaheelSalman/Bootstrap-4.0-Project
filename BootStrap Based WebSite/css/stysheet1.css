@@ -1,0 +1,49 @@
+*{
+	box-sizing: border-box;
+}
+#upper-space{
+	margin-top: 33px;
+}
+#sidebar{
+	border: 2px solid black;
+}
+#sidebar li{
+	list-style: none;
+	margin-left: -25px;
+
+}
+#ssp h1:nth-child(1){
+	font-size: 45px;
+	text-align: center;
+}
+#ssp p:nth-child(2){
+	text-align: center;
+	margin-bottom: 30px;
+}
+#article{	
+	margin-top: 10px;
+}
+#sidebar a:hover {
+  color: hotpink;
+}
+#sidebar a:active {
+  color: blue;
+}
+#sidebar a:link {
+  color: red;
+}
+
+
+.active{
+	background-color: grey;
+color: white;
+}
+#buttons{
+	margin-top: 50px;
+}
+@media (max-width: 768px){
+
+#sidebar {
+	display: none;
+}
+}
